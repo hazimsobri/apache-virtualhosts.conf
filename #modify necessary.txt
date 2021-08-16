@@ -1,0 +1,24 @@
+#modify necessary
+
+<VirtualHost *:80>
+	DocumentRoot "D:/xampp/htdocs/"
+	ServerName localhost
+</VirtualHost>
+#we add this to make sure we can access to open PHPmyAdmin from http://localhost/phpmyadmin
+#DocumentRoot - the root of the web server in your machine. In XAMPP it is ../xampp/htdocs/
+
+<VirtualHost *:80>
+	ServerAdmin mail@trex150.tk
+	DocumentRoot "D:/xampp/htdocs/trex150.tk"
+	ServerName trex150.tk
+	ServerAlias www.trex150.tk
+</VirtualHost>
+#by adding this we can access files from folder ../xampp/htdocs/trex150/ in the server
+#DocumentRoot - the root directory to be browsed. In this case it is ../xampp/htdocs/trex150/
+#ServerName - domain name
+#ServerAlias - sub-domain
+#ServerAdmin - email address
+
+#80 is the port address you server listening. By default it is 80. It need to be changed if
+#your server listens to different port.
+#for example if you access localhost by http://localhost:8080 then it should be changed to 8000
